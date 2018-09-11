@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "inputUsername": "",
+      "inputEmail": "test",
+      "inputPassword": "1234",
+      "id": 1
+    }
+  ],
+  "samples": [],
+  "projects": []
+}

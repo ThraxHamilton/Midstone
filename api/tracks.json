@@ -5,6 +5,18 @@
       "inputEmail": "test",
       "inputPassword": "1234",
       "id": 1
+    },
+    {
+      "inputUsername": "earthgang",
+      "inputEmail": "bx@yerrr.com",
+      "inputPassword": "1233",
+      "id": 2
+    },
+    {
+      "inputUsername": "earthgang",
+      "inputEmail": "bx@yerrr.com",
+      "inputPassword": "1233",
+      "id": 3
     }
   ],
   "samples": [],

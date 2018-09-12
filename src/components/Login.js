@@ -67,13 +67,24 @@ export default class Login extends Component {
                 <label htmlFor="inputEmail">
                     Email address
                 </label>
+
                 <input onChange={this.handleFieldChange} type="email"
                     id="email"
                     placeholder="Email address"
                     required="" autoFocus="" />
+
+                <label htmlFor="inputPassword">
+                    Username
+                </label>
+
+                <input onChange={this.handleFieldChange} type="username"
+                    id="username"
+                    placeholder="Username"
+                    required="" autoFocus="" />
                 <label htmlFor="inputPassword">
                     Password
                 </label>
+
                 <input onChange={this.handleFieldChange} type="password"
                     id="password"
                     placeholder="Password"

@@ -42,12 +42,33 @@ export default class SampleForm extends Component {
             <React.Fragment>
                 <form className="SampleForm">
                     <div className="form-group">
-                        <label htmlFor="ownerName">New Employee</label>
+                        <label htmlFor="ownerName">New Sample</label>
                         <input type="text" required="true"
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="sample"
+                            id="song"
                             placeholder="Employee Name" />
+
+                            <label htmlFor="ownerName">Artist</label>
+                        <input type="text" required="true"
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="artist"
+                            placeholder="Artist" />
+
+                            <label htmlFor="ownerName">Album</label>
+                        <input type="text" required="true"
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="album"
+                            placeholder="Album" />
+
+                            <label htmlFor="ownerName">Year</label>
+                        <input type="text" required="true"
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="year"
+                            placeholder="Album" />
                     </div>
 
                     <button type="submit" onClick={this.constructNewSample} className="btn btn-primary">Submit</button>

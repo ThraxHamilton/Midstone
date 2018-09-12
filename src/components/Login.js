@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import DataManager from "../data/DataManager"
+import LoginManager from '../modules/LoginManager'
 
 export default class Login extends Component {
 
@@ -28,7 +28,7 @@ export default class Login extends Component {
         let email = this.state.email;
         let password = this.state.password;
         let username = this.state.username;
-        DataManager.getAll("users")
+        LoginManager.getAll("users")
             .then(users => {
                 let loginUser = users.find(u => u.inputEmail === email && u.inputPassword === password && u.inputUsername)
                 if(loginUser){

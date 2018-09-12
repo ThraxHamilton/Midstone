@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import DataManager from "../data/DataManager"
+import LoginManager from '../modules/LoginManager'
 
 export default class Login extends Component {
 
@@ -28,7 +28,7 @@ export default class Login extends Component {
         let email = this.state.email;
         let password = this.state.password;
         let username = this.state.username;
-        DataManager.getAll("users")
+        LoginManager.getAll("users")
             .then(users => {
                 let loginUser = users.find(u => u.inputEmail === email && u.inputPassword === password && u.inputUsername)
                 if(loginUser){
@@ -67,13 +67,24 @@ export default class Login extends Component {
                 <label htmlFor="inputEmail">
                     Email address
                 </label>
+
                 <input onChange={this.handleFieldChange} type="email"
                     id="email"
                     placeholder="Email address"
                     required="" autoFocus="" />
+
+                <label htmlFor="inputPassword">
+                    Username
+                </label>
+
+                <input onChange={this.handleFieldChange} type="username"
+                    id="username"
+                    placeholder="Username"
+                    required="" autoFocus="" />
                 <label htmlFor="inputPassword">
                     Password
                 </label>
+
                 <input onChange={this.handleFieldChange} type="password"
                     id="password"
                     placeholder="Password"

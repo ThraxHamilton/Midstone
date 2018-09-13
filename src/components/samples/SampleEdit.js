@@ -18,12 +18,14 @@ export default class SampleEdit extends Component {
         evt.preventDefault()
 
             const sample = {
-                song: this.state.sample,
+                song: this.state.song,
                 artist: this.state.artist,
+                album: this.state.album,
+                year: this.state.year
             }
             const sampleEditId = parseInt(this.props.match.params.sampleId, 0)
             // Create the animal and redirect user to animal list
-            this.props.editSample(sample, sampleEditId, 'samples').then(() => this.props.history.push("/samples"))
+            this.props.editSample(sample, sampleEditId).then(() => this.props.history.push("/samples"))
         }
 
     render(){
@@ -32,28 +34,28 @@ export default class SampleEdit extends Component {
             <form className="SampleForm">
                 <div className="form-group">
                     <label htmlFor="ownerName">New Sample</label>
-                    <input type="text" required="true"
+                    <input type="text" required={true}
                         className="form-control"
                         onChange={this.handleFieldChange}
                         id="song"
                         placeholder="Employee Name" />
 
                         <label htmlFor="ownerName">Artist</label>
-                    <input type="text" required="true"
+                    <input type="text" required={true}
                         className="form-control"
                         onChange={this.handleFieldChange}
                         id="artist"
                         placeholder="Artist" />
 
                         <label htmlFor="ownerName">Album</label>
-                    <input type="text" required="true"
+                    <input type="text" required={true}
                         className="form-control"
                         onChange={this.handleFieldChange}
                         id="album"
                         placeholder="Album" />
 
                         <label htmlFor="ownerName">Year</label>
-                    <input type="text" required="true"
+                    <input type="text" required={true}
                         className="form-control"
                         onChange={this.handleFieldChange}
                         id="year"

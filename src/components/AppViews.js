@@ -54,7 +54,7 @@ export default class AppViews extends Component {
     }
 
     // EDIT FUNCTION(s)
-    editSample = (id, sample) => SampleManager.edit(sample, id)
+    editSample = (sample, id) => SampleManager.edit(sample, id)
         .then(() => SampleManager.getAll())
         .then(samples => this.setState({
             samples: samples
@@ -88,6 +88,8 @@ export default class AppViews extends Component {
                 <Route exact path="/samples/:sampleId(\d+)" render={(props) => {
                     return <SampleDetail {...props} deleteSample={this.deleteSample} samples={this.state.samples} />
                 }} />
+                
+                
                 <Route exact path="/samples/edit/:sampleId(\d+)" render={(props) => {
                     return <SampleEdit {...props} editSample={this.editSample} samples={this.state.samples} />
                 }} />

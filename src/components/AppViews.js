@@ -10,6 +10,12 @@ import SampleEdit from './samples/SampleEdit'
 import SampleDetail from './samples/SampleDetail'
 import SampleManager from '../modules/SampleManager'
 
+import ProjectDetail from './projects/ProjectDetail'
+import ProjectEdit from './projects/ProjectEdit'
+import ProjectForm from './projects/ProjectForm'
+import ProjectList from './projects/ProjectList'
+import ProjectManager from '../modules/ProjectManager'
+
 
 export default class AppViews extends Component {
     isAuthenticated = () => sessionStorage.getItem("credentials") !== null
@@ -17,11 +23,13 @@ export default class AppViews extends Component {
     state = {
         user: [],
         samples: [],
+        projects: [],
     }
     addUser = (user, link) => LoginManager.post(user, link)
         .then(users => this.setState({
             users: users
         }))
+
     componentDidMount() {
         const _state = {}
         LoginManager.getAll("users").then(users => _state.users = users)
@@ -33,8 +41,13 @@ export default class AppViews extends Component {
                 samples: allSamples
             })
         })
+        ProjectManager.getAll().then(allProjects => {
+            this.setState({
+                projects: allProjects
+            })
+        })
     }
-
+    // SAMPLES
     addSample = sample => SampleManager.post(sample)
         .then(() => SampleManager.getAll())
         .then(samples => this.setState({
@@ -52,13 +65,40 @@ export default class AppViews extends Component {
                 samples: samples
             }))
     }
+    // PROJECTS
+    addProject = project => ProjectManager.post(project)
+        .then(() => ProjectManager.getAll())
+        .then(project => this.setState({
+            project: project
+        }))
 
-    // EDIT FUNCTION(s)
+    deleteProject = id => {
+        return fetch(`http://localhost:5002/projects/${id}`, {
+            method: "DELETE"
+        })
+            .then(e => e.json())
+            .then(() => fetch(`http://localhost:5002/projects`))
+            .then(e => e.json())
+            .then(projects => this.setState({
+                projects: projects
+            }))
+    }
+
+
+
+    // EDIT SAMPLE FUNCTION(s)
     editSample = (sample, id) => SampleManager.edit(sample, id)
         .then(() => SampleManager.getAll())
         .then(samples => this.setState({
             samples: samples
         }))
+
+     // EDIT PROJECT FUNCTION(s)
+     editProject= (project, id) => ProjectManager.edit(project, id)
+     .then(() => ProjectManager.getAll())
+     .then(projects => this.setState({
+         projects: projects
+     }))
 
     render() {
         return (
@@ -70,14 +110,15 @@ export default class AppViews extends Component {
                             addUser={this.addUser} />
                     }} />
 
-                    {/* ADD NEW SAMPLE */}
+                 {/* SAMPLES */} {/* SAMPLES */} {/* SAMPLES */}{/* SAMPLES */}{/* SAMPLES */}
+                    {/* Add New Sample*/}
                     <Route path="/samples/new" render={(props) => {
                         return <SampleForm {...props}
                             addSample={this.addSample}
                             sample={this.state.samples} />
                     }} />
 
-                    {/* SAMPLE LIST */}
+                    {/* Sample List */}
                 <Route exact path="/samples" render={(props) => {
                     return <SampleList {...props}
                         deleteSample={this.deleteSample}
@@ -94,9 +135,37 @@ export default class AppViews extends Component {
                     return <SampleEdit {...props} editSample={this.editSample} samples={this.state.samples} />
                 }} />
 
-
-
+                {/* PROJECTS */}{/* PROJECTS */}{/* PROJECTS */}{/* PROJECTS */}{/* PROJECTS */}
+                {/* New Project */}
+                <Route path="/projects/new" render={(props) => {
+                        return <ProjectForm {...props}
+                            addProject={this.addProject}
+                            project={this.state.projects} />
                     }} />
+                    {/* Project List */}
+                    <Route exact path="/projects" render={(props) => {
+                    return <ProjectList {...props}
+                        deleteProject={this.deleteProject}
+                        projects={this.state.projects} />
+                }} />
+                {/* Details */}
+                <Route exact path="/projects/:projectId(\d+)" render={(props) => {
+                    return <ProjectDetail {...props} deleteProject={this.deleteProject} projects={this.state.projects} />
+                }} />
+
+                {/* Edit */}
+                <Route exact path="/projects/edit/:projectId(\d+)" render={(props) => {
+                    return <ProjectEdit {...props} editProject={this.editProject} projects={this.state.projects} />
+                }} />
+
+                
+
+
+
+
+
+
+                    }} 
                 </div>
             </React.Fragment>
         )

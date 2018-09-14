@@ -79,5 +79,13 @@
       "id": 5
     }
   ],
-  "projects": []
+  "projects": [
+    {
+      "project": "testq",
+      "sample": "test",
+      "artist": "test",
+      "album": "test",
+      "id": 2
+    }
+  ]
 }

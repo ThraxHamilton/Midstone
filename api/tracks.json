@@ -81,11 +81,18 @@
   ],
   "projects": [
     {
-      "project": "testq",
-      "sample": "test",
-      "artist": "test",
-      "album": "test",
+      "project": "edit",
+      "sample": "edit",
+      "artist": "uhoh",
+      "album": "1889",
       "id": 2
+    },
+    {
+      "project": "desus",
+      "sample": "mert",
+      "artist": "eri",
+      "album": "yerr",
+      "id": 3
     }
   ]
 }

@@ -47,6 +47,18 @@
       "inputEmail": "bx@yerrr.com",
       "inputPassword": "1234",
       "id": 8
+    },
+    {
+      "inputUsername": "barry0",
+      "inputEmail": "bx@yerrr.com",
+      "inputPassword": "420",
+      "id": 9
+    },
+    {
+      "inputUsername": "brat",
+      "inputEmail": "bx@yerrr.com",
+      "inputPassword": "123",
+      "id": 10
     }
   ],
   "samples": [
@@ -74,9 +86,9 @@
     {
       "song": "socks",
       "artist": "1",
-      "album": "2",
-      "year": "Levi's",
-      "id": 5
+      "album": "234",
+      "year": "1999",
+      "id": 6
     }
   ],
   "projects": [
@@ -93,6 +105,34 @@
       "artist": "eri",
       "album": "yerr",
       "id": 3
+    },
+    {
+      "project": "test",
+      "sample": "give it 2 u",
+      "artist": "da brat ",
+      "album": "funkdafied",
+      "id": 4
+    },
+    {
+      "project": "12",
+      "sample": "fa all ya'll",
+      "artist": "da brat ",
+      "album": "funkdafied",
+      "id": 5
+    },
+    {
+      "project": "test",
+      "sample": "test",
+      "artist": "test",
+      "album": "1989",
+      "id": 6
+    },
+    {
+      "project": "test",
+      "sample": "23",
+      "artist": "test",
+      "album": "234",
+      "id": 7
     }
   ]
 }

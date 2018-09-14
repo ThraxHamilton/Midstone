@@ -41,7 +41,7 @@ export default class Login extends Component {
                             id: loginUser.id
                         })
                     )
-                    this.props.history.push("/users")
+                    this.props.history.push("/samples")
                 } else {
                     alert("No user found, please register!")
                 }

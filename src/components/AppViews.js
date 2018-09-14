@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Route} from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 
 import Login from './Login'
 import LoginManager from '../modules/LoginManager'
@@ -34,7 +34,7 @@ export default class AppViews extends Component {
         const _state = {}
         LoginManager.getAll("users").then(users => _state.users = users)
         // .then(() => SampleManager.getAll("samples").then(samples => _state.samples = samples))
-        
+
         SampleManager.getAll().then(allSamples => {
             this.setState({
                 samples: allSamples
@@ -45,7 +45,7 @@ export default class AppViews extends Component {
                 projects: allProjects
             })
         })
-        .then(() => { this.setState(_state) })
+            .then(() => { this.setState(_state) })
     }
     // SAMPLES
     addSample = sample => SampleManager.post(sample)
@@ -93,25 +93,26 @@ export default class AppViews extends Component {
             samples: samples
         }))
 
-     // EDIT PROJECT FUNCTION(s)
-     editProject= (project, id) => ProjectManager.edit(project, id)
-     .then(() => ProjectManager.getAll())
-     .then(projects => this.setState({
-         projects: projects
-     }))
+    // EDIT PROJECT FUNCTION(s)
+    editProject = (project, id) => ProjectManager.edit(project, id)
+        .then(() => ProjectManager.getAll())
+        .then(projects => this.setState({
+            projects: projects
+        }))
 
     render() {
         return (
             <React.Fragment>
                 <div className="viewArea">
-                {/* LOGIN */}
-                    <Route path="/" render={(props) => {
+                    {/* LOGIN */}
+                    <Route path="/login" render={(props) => {
                         return <Login {...props}
                             addUser={this.addUser} />
                     }} />
 
-                 {/* SAMPLES */} {/* SAMPLES */} {/* SAMPLES */}{/* SAMPLES */}{/* SAMPLES */}
+                    {/* SAMPLES */} {/* SAMPLES */} {/* SAMPLES */}{/* SAMPLES */}{/* SAMPLES */}
                     {/* Add New Sample*/}
+
                     <Route path="/samples/new" render={(props) => {
                         return <SampleForm {...props}
                             addSample={this.addSample}
@@ -119,53 +120,54 @@ export default class AppViews extends Component {
                     }} />
 
                     {/* Sample List */}
-                <Route exact path="/samples" render={(props) => {
-                    return <SampleList {...props}
-                        deleteSample={this.deleteSample}
-                        samples={this.state.samples} />
-                }} />
 
-                {/* Exact path for details */}
-                <Route exact path="/samples/:sampleId(\d+)" render={(props) => {
-                    return <SampleDetail {...props} deleteSample={this.deleteSample} samples={this.state.samples} />
-                }} />
-                
-                
-                <Route exact path="/samples/edit/:sampleId(\d+)" render={(props) => {
-                    return <SampleEdit {...props} editSample={this.editSample} samples={this.state.samples} />
-                }} />
+                    <Route exact path="/samples" render={(props) => {
+                        return <SampleList {...props}
+                            deleteSample={this.deleteSample}
+                            samples={this.state.samples} />
+                    }} />
 
-                {/* PROJECTS */}{/* PROJECTS */}{/* PROJECTS */}{/* PROJECTS */}{/* PROJECTS */}
-                {/* New Project */}
-                <Route path="/projects/new" render={(props) => {
+                    {/* Exact path for details */}
+                    <Route exact path="/samples/:sampleId(\d+)" render={(props) => {
+                        return <SampleDetail {...props} deleteSample={this.deleteSample} samples={this.state.samples} />
+                    }} />
+
+                    {/* Edit Sample */}
+                    <Route exact path="/samples/edit/:sampleId(\d+)" render={(props) => {
+                        return <SampleEdit {...props} editSample={this.editSample} samples={this.state.samples} />
+                    }} />
+
+                    {/* PROJECTS */}{/* PROJECTS */}{/* PROJECTS */}{/* PROJECTS */}{/* PROJECTS */}
+                    {/* New Project */}
+                    <Route path="/projects/new" render={(props) => {
                         return <ProjectForm {...props}
                             addProject={this.addProject}
                             project={this.state.projects} />
                     }} />
                     {/* Project List */}
                     <Route exact path="/projects" render={(props) => {
-                    return <ProjectList {...props}
-                        deleteProject={this.deleteProject}
-                        projects={this.state.projects} />
-                }} />
-                {/* Details */}
-                <Route exact path="/projects/:projectId(\d+)" render={(props) => {
-                    return <ProjectDetail {...props} deleteProject={this.deleteProject} projects={this.state.projects} />
-                }} />
+                        return <ProjectList {...props}
+                            deleteProject={this.deleteProject}
+                            projects={this.state.projects} />
+                    }} />
+                    {/* Details */}
+                    <Route path="/projects/:projectId(\d+)" render={(props) => {
+                        return <ProjectDetail {...props} deleteProject={this.deleteProject} projects={this.state.projects} />
+                    }} />
 
-                {/* Edit */}
-                <Route exact path="/projects/edit/:projectId(\d+)" render={(props) => {
-                    return <ProjectEdit {...props} editProject={this.editProject} projects={this.state.projects} />
-                }} />
-
-                
+                    {/* Edit */}
+                    <Route exact path="/projects/edit/:projectId(\d+)" render={(props) => {
+                        return <ProjectEdit {...props} editProject={this.editProject} projects={this.state.projects} />
+                    }} />
 
 
 
 
 
 
-                    }} 
+
+
+                    }}
                 </div>
             </React.Fragment>
         )

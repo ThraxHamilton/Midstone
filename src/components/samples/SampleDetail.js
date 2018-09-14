@@ -9,7 +9,12 @@ export default class SampleDetail extends Component {
                 <div key={sample.id} className="card">
                     <div className="card-body">
                         <h4 className="card-title">
-                            {sample.song}
+                        <ul>
+                            <li>{sample.song}</li>
+                            <li>{sample.artist}</li>
+                            <li>{sample.album}</li>
+                            <li>{sample.year}</li>
+                            </ul>
                         </h4>
                         <h6 className="card-title">{sample.artist}</h6>
                         <a href="#"

@@ -21,10 +21,10 @@ export default class ProjectList extends Component {
                             <div key={projects.id} className="card">
                                 <div className="card-body">
                                     <h5 className="card-title">
-                                        {projects.project}
-                                        {projects.sample}
-                                        {projects.artist}
-                                        {projects.album}
+                                       <div> {projects.project}</div>
+                                       <div> {projects.sample}</div>
+                                       <div> {projects.artist}</div>
+                                        <div>{projects.album}</div>
                                         
 
 

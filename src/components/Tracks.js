@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import AppViews from './AppViews'
 import Navbar from './nav/Navbar'
 
+import "bootstrap/dist/css/bootstrap.min.css"
+
 
 class Tracks extends Component {
     render() {

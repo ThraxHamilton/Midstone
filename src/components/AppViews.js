@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Route, Redirect } from 'react-router-dom'
+import { Route} from 'react-router-dom'
 
 import Login from './Login'
 import LoginManager from '../modules/LoginManager'
@@ -33,9 +33,8 @@ export default class AppViews extends Component {
     componentDidMount() {
         const _state = {}
         LoginManager.getAll("users").then(users => _state.users = users)
-            .then(() => { this.setState(_state) })
-            // .then(() => SampleManager.getAll("samples").then(samples => _state.samples = samples))
-
+        // .then(() => SampleManager.getAll("samples").then(samples => _state.samples = samples))
+        
         SampleManager.getAll().then(allSamples => {
             this.setState({
                 samples: allSamples
@@ -46,6 +45,7 @@ export default class AppViews extends Component {
                 projects: allProjects
             })
         })
+        .then(() => { this.setState(_state) })
     }
     // SAMPLES
     addSample = sample => SampleManager.post(sample)

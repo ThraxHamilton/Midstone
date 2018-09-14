@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-export default class SampleList extends Component {
+export default class ProjectList extends Component {
     render() {
         return(
             <React.Fragment>
@@ -9,7 +9,7 @@ export default class SampleList extends Component {
                     <button type="button"
                         className="btn btn-success"
                         onClick={() => {
-                            this.props.history.push("/samples/new")
+                            this.props.history.push("/projects/new")
                         }
                         }>
                         Add New Project

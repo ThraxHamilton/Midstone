@@ -35,8 +35,49 @@
       "inputEmail": "bx@yerrr.com",
       "inputPassword": "900",
       "id": 6
+    },
+    {
+      "inputUsername": "barryO",
+      "inputEmail": "bx@yerrr.com",
+      "inputPassword": "420",
+      "id": 7
+    },
+    {
+      "inputUsername": "barryO",
+      "inputEmail": "bx@yerrr.com",
+      "inputPassword": "1234",
+      "id": 8
     }
   ],
-  "samples": [],
+  "samples": [
+    {
+      "song": "",
+      "artist": "test",
+      "album": "test",
+      "year": "",
+      "id": 2
+    },
+    {
+      "song": "test",
+      "artist": "rew",
+      "album": "reew",
+      "year": "",
+      "id": 3
+    },
+    {
+      "song": "display",
+      "artist": "1",
+      "album": "2",
+      "year": "",
+      "id": 4
+    },
+    {
+      "song": "socks",
+      "artist": "1",
+      "album": "2",
+      "year": "Levi's",
+      "id": 5
+    }
+  ],
   "projects": []
 }

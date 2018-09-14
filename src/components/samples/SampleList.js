@@ -12,27 +12,38 @@ export default class SampleList extends Component {
                             this.props.history.push("/samples/new")
                         }
                         }>
-                       Add New Owner
+                        Add New Sample
                 </button>
                 </div>
-            <section className="owners">
-            {
-                this.props.samples.map(samples =>
-                    <div key={samples.id} className="card">
-                    <div className="card-body">
-                        <h5 className="card-title">
-                            {samples.song}
-                        
-                        <Link className="nav-link" to={`/samples/${samples.id}`}>Details</Link>
-                            <a href="#"
-                                onClick={() => this.props.deleteSample(samples.id)}
-                                className="card-link">Delete</a>
-                        </h5>
-                    </div>
-                    </div>
-                )
-            }
-            </section>
+                <section className="owners">
+                    {
+                        this.props.samples.map(samples =>
+                            <div key={samples.id} className="card">
+                                <div className="card-body">
+                                    <h5 className="card-title">
+                                        {samples.song}
+                                        {samples.artist}
+                                        {samples.album}
+                                        {samples.year}
+
+
+                                        <Link className="nav-link" to={`/samples/${samples.id}`}>Details</Link>
+
+                                        <a href="#"
+                                            onClick={() => { this.props.history.push(`/samples/edit/${samples.id}`) }}
+                                            className="card-link">Edit</a>
+                                            
+                                        <a href="#"
+                                            onClick={() => this.props.deleteSample(samples.id)}
+                                            className="card-link">Delete</a>
+
+
+                                    </h5>
+                                </div>
+                            </div>
+                        )
+                    }
+                </section>
             </React.Fragment>
         )
     }

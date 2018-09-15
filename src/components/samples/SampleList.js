@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
+    Card, Button, CardImg, CardTitle, CardText, CardDeck,
+    CardSubtitle, CardBody
 } from 'reactstrap';
+
+
 
 export default class SampleList extends Component {
     render() {
@@ -25,25 +27,24 @@ export default class SampleList extends Component {
                         this.props.samples.map(samples =>
                             <div key={samples.id} className="card">
                                 <div className="card-body">
-                                    <Card>
-                                        <CardImg top width="80%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=218&h=180" alt="Card image cap" />
-                                        <CardBody>
-                                            <CardTitle>{samples.song}</CardTitle>
-                                            <CardSubtitle>{samples.artist}</CardSubtitle>
-                                            <CardText>
-
-                                            </CardText>
-                                            <Button> <Link className="nav-link" to={`/samples/${samples.id}`}>Details</Link></Button>
-
-                                            <Button><a href="#"
-                                                onClick={() => { this.props.history.push(`/samples/edit/${samples.id}`) }}
-                                                className="card-link">Edit</a></Button>
-                                                
-                                            <Button><a href="#"
-                                                onClick={() => this.props.deleteSample(samples.id)}
-                                                className="card-link">Delete</a></Button>
-                                        </CardBody>
-                                    </Card>
+                                    <CardDeck>
+                                        <Card>
+                                            <CardImg top width="100%" src="{this.state.image}" alt="Card image cap" />
+                                            <CardBody>
+                                                <CardTitle>{samples.song}</CardTitle>
+                                                <CardSubtitle>{samples.artist}</CardSubtitle>
+                                                <CardText>{samples.album}
+                                                    {samples.year}</CardText>
+                                                <Button><a href="#"
+                                                    onClick={() => { this.props.history.push(`/samples/edit/${samples.id}`) }}
+                                                    className="card-link">Edit</a></Button>
+                                                <Button><a href="#"
+                                                    onClick={() => this.props.deleteSample(samples.id)}
+                                                    className="card-link">Delete</a></Button>
+                                                    <Button> <Link className="nav-link" to={`/samples/${samples.id}`}>Details</Link></Button>
+                                            </CardBody>
+                                        </Card>
+                                    </CardDeck>
                                 </div>
 
 

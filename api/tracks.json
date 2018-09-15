@@ -63,20 +63,6 @@
   ],
   "samples": [
     {
-      "song": "",
-      "artist": "test",
-      "album": "test",
-      "year": "",
-      "id": 2
-    },
-    {
-      "song": "test",
-      "artist": "rew",
-      "album": "reew",
-      "year": "",
-      "id": 3
-    },
-    {
       "song": "display",
       "artist": "1",
       "album": "2",
@@ -89,6 +75,20 @@
       "album": "234",
       "year": "1999",
       "id": 6
+    },
+    {
+      "song": "test",
+      "artist": "test",
+      "album": "test",
+      "year": "test",
+      "id": 7
+    },
+    {
+      "song": "Sample",
+      "artist": "Maxwell",
+      "album": "Urban Hang Suite",
+      "year": "1996",
+      "id": 8
     }
   ],
   "projects": [

@@ -63,20 +63,6 @@
   ],
   "samples": [
     {
-      "song": "display",
-      "artist": "1",
-      "album": "2",
-      "year": "",
-      "id": 4
-    },
-    {
-      "song": "socks",
-      "artist": "1",
-      "album": "234",
-      "year": "1999",
-      "id": 6
-    },
-    {
       "song": "test",
       "artist": "test",
       "album": "test",
@@ -89,73 +75,15 @@
       "album": "Urban Hang Suite",
       "year": "1996",
       "id": 8
-    },
-    {
-      "song": "socks",
-      "artist": "test",
-      "album": "t",
-      "year": "1234",
-      "id": 9
-    },
-    {
-      "song": "test",
-      "artist": "test",
-      "album": "test",
-      "year": "2009",
-      "image": "",
-      "id": 10
-    },
-    {
-      "song": "",
-      "artist": "",
-      "album": "",
-      "year": "",
-      "image": "",
-      "id": 11
     }
   ],
   "projects": [
     {
-      "project": "edit",
-      "sample": "edit",
-      "artist": "uhoh",
-      "album": "1889",
-      "id": 2
-    },
-    {
-      "project": "desus",
-      "sample": "mert",
-      "artist": "eri",
-      "album": "yerr",
-      "id": 3
-    },
-    {
-      "project": "test",
-      "sample": "give it 2 u",
-      "artist": "da brat ",
-      "album": "funkdafied",
-      "id": 4
-    },
-    {
-      "project": "12",
-      "sample": "fa all ya'll",
-      "artist": "da brat ",
-      "album": "funkdafied",
-      "id": 5
-    },
-    {
-      "project": "test",
-      "sample": "test",
-      "artist": "test",
-      "album": "1989",
-      "id": 6
-    },
-    {
-      "project": "test",
-      "sample": "23",
-      "artist": "test",
-      "album": "234",
-      "id": 7
+      "project": "Dubs 478",
+      "sample": "A Love of Your Own",
+      "artist": "The Ebonys",
+      "album": "",
+      "id": 8
     }
   ]
 }

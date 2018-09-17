@@ -1,20 +1,55 @@
 import React, { Component } from "react"
-import axios from 'axios'
+import Dropzone from 'react-dropzone';
+import request from 'superagent';
+
+
+const CLOUDINARY_UPLOAD_PRESET = 'aawrrwib';
+const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/cloud10/upload';
 
 export default class SampleForm extends Component {
-   
-    // Set initial state
-  state = {
-        song: "",
-        artist: "",
-        album: "",
-        year: "",
-        image:""
-       
+    constructor(props) {
+        super(props);
+        this.state = {
+            uploadedFileCloudinaryUrl: "",
+            song: "",
+            artist: "",
+            album: "",
+            year: "",
+            image: ""
+        };
     }
-    
-                        
-    
+
+    onImageDrop(files) {
+        this.setState({
+            uploadedFile: files[0]
+        });
+        console.log(files)
+
+        this.handleImageUpload(files[0]);
+        console.log(files)
+    }
+    handleImageUpload(file) {
+        let upload = request.post(CLOUDINARY_UPLOAD_URL)
+            .field('upload_preset' , CLOUDINARY_UPLOAD_PRESET)
+                    .field('file', file);
+        upload.end((err, response) => {
+            if (err) {
+                console.error(err);
+            }
+            if (response.body.secure_url !== '') {
+                this.setState({
+                    uploadedFileCloudinaryUrl: response.body.secure_url
+                });
+            }
+        });
+    }
+
+
+    // Set initial state
+
+
+
+
     // Update state whenever an input field is edited
     handleFieldChange = evt => {
         const stateToChange = {}
@@ -36,7 +71,9 @@ export default class SampleForm extends Component {
                 artist: this.state.artist,
                 album: this.state.album,
                 year: this.state.year,
-                
+                image: this.state.image,
+                uploadedFileCloudinaryUrl: this.state.uploadedFileCloudinaryUrl
+
             }
 
             // Create the employee and redirect user to employee list
@@ -44,20 +81,7 @@ export default class SampleForm extends Component {
         }
     }
 
-    imageSelectedHandler = event => {
-        this.setState({
-            image: event.target.files[0]
-        })
-        console.log(event.target.files[0])
-    }
-    imageUploadHandler = () => {
-        // const fd = FormData()
-        // fd.append('image', this.state.image, this.state.image.name)
-        axios.post('https://api.cloudinary.com/v1_1/cloud10/image/upload')
-        .then(res => {
-            console.log(res)
-        })
-    }
+
 
     render() {
         return (
@@ -91,10 +115,17 @@ export default class SampleForm extends Component {
                             onChange={this.handleFieldChange}
                             id="year"
                             placeholder="Album" />
+
+                        <Dropzone
+                            multiple={false}
+                            accept="image/*"
+                            onDrop={this.onImageDrop.bind(this)}>
+                            <p>Drop an image or click to select a file to upload.</p>
+                        </Dropzone>
                     </div>
-                        <input type='file' onChange={this.imageSelectedHandler} />
-                        <button onClick={this.imageUploadHandler}>Upload</button>
-                        
+
+
+
 
                     <button type="submit" onClick={this.constructNewSample} className="btn btn-primary">Submit</button>
                 </form>

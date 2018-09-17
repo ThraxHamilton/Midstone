@@ -29,7 +29,7 @@ export default class SampleList extends Component {
                                 <div className="card-body">
                                     <CardDeck>
                                         <Card>
-                                        <img src={samples.uploadedFileCloudinaryUrl} style={{height: "auto", width: "400px" }}/>
+                                            <img src={samples.uploadedFileCloudinaryUrl} style={{ height: "auto", width: "400px" }} />
                                             <CardBody>
                                                 <CardTitle>{samples.song}</CardTitle>
                                                 <CardSubtitle>{samples.artist}</CardSubtitle>
@@ -41,7 +41,7 @@ export default class SampleList extends Component {
                                                 <Button><a href="#"
                                                     onClick={() => this.props.deleteSample(samples.id)}
                                                     className="card-link">Delete</a></Button>
-                                                    <Button> <Link className="nav-link" to={`/samples/${samples.id}`}>Details</Link></Button>
+                                                <Button> <Link className="nav-link" to={`/samples/${samples.id}`}>Details</Link></Button>
                                             </CardBody>
                                         </Card>
                                     </CardDeck>
@@ -61,4 +61,3 @@ export default class SampleList extends Component {
         )
     }
 }
-

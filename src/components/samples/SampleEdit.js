@@ -5,7 +5,8 @@ export default class SampleEdit extends Component {
         song: [],
         artist: [],
         album: [],
-        year: []
+        year: [],
+        image: []
     }
 
     handleFieldChange = evt => {

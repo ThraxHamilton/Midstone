@@ -29,7 +29,7 @@ export default class SampleList extends Component {
                                 <div className="card-body">
                                     <CardDeck>
                                         <Card>
-                                            <CardImg top width="100%" src="{this.state.image}" alt="Card image cap" />
+                                        <img src={samples.uploadedFileCloudinaryUrl} style={{height: "auto", width: "400px" }}/>
                                             <CardBody>
                                                 <CardTitle>{samples.song}</CardTitle>
                                                 <CardSubtitle>{samples.artist}</CardSubtitle>

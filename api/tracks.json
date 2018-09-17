@@ -75,6 +75,24 @@
       "album": "Urban Hang Suite",
       "year": "1996",
       "id": 8
+    },
+    {
+      "song": "test",
+      "artist": "test",
+      "album": "test",
+      "year": "2000",
+      "image": "",
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537200609/IMG_2078_smajuo.jpg",
+      "id": 9
+    },
+    {
+      "song": "test",
+      "artist": "test",
+      "album": "test",
+      "year": "1990",
+      "image": "",
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537200930/IMG_2078_jv2oog.jpg",
+      "id": 10
     }
   ],
   "projects": [

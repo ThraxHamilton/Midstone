@@ -9,10 +9,10 @@ export default class ProjectDetail extends Component {
                 <div key={project.id} className="card">
                     <div className="card-body">
                         <h4 className="card-title">
-                            {project.project}
-                            {project.sample}
-                            {project.artist}
-                            {project.album}
+                           <div>{project.project}</div> 
+                            <div>{project.sample}</div>
+                            <div>{project.artist}</div>
+                            <div>{project.album}</div>
                         </h4>
                         {/* <h6 className="card-title">{project.artist}</h6> */}
                         <a href="#"

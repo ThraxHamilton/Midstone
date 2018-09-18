@@ -1,8 +1,39 @@
 .sample-card{
     margin: 4px;
-    max-width: auto;
+    width: 20%;
     justify-items: auto;
-   align-items: flex-end
+   align-items: flex-end;
+   
+}
+
+.card-edit, .card-delete{
+    justify-content: center
+}
+
+.card-body{
+    background-color: #005377
+}
+
+.newSampleButton{
+    justify-content: center
+}
+
+.viewArea{
+    background-color: #022F40
+}
+
+.samples-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.song{
+    color: #FF7700
+}
+.artist{
+    color:#ECA400
 }
 
 

@@ -64,21 +64,12 @@
   "samples": [
     {
       "song": "test",
-      "artist": "test",
-      "album": "test",
+      "artist": "B.G.",
+      "album": "Checkmate",
       "year": "2000",
       "image": "",
-      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537200609/IMG_2078_smajuo.jpg",
-      "id": 9
-    },
-    {
-      "song": "test",
-      "artist": "test",
-      "album": "test",
-      "year": "1990",
-      "image": "",
-      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537200930/IMG_2078_jv2oog.jpg",
-      "id": 10
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537248080/IMG_1459_gnv0fu.jpg",
+      "id": 15
     },
     {
       "song": "test",
@@ -86,35 +77,26 @@
       "album": "test",
       "year": "Levi's",
       "image": "",
-      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537214157/IMG_2078_fcd97f.jpg",
-      "id": 12
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537296637/IMG_1459_i9jy2e.jpg",
+      "id": 16
     },
     {
-      "song": "socks",
+      "song": "test",
       "artist": "test",
-      "album": "poison",
-      "year": "2000",
+      "album": "test",
+      "year": "Levi's",
       "image": "",
-      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537216063/IMG_2078_iduxd6.jpg",
-      "id": 13
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537303107/IMG_1459_tmj0dw.jpg",
+      "id": 17
     },
     {
-      "song": "test",
-      "artist": "test1",
-      "album": "test3",
-      "year": "1999",
+      "song": "",
+      "artist": "",
+      "album": "",
+      "year": "",
       "image": "",
-      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537247939/IMG_2078_bbngwi.jpg",
-      "id": 14
-    },
-    {
-      "song": "test",
-      "artist": "B.G.",
-      "album": "Checkmate",
-      "year": "2000",
-      "image": "",
-      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537248080/IMG_1459_gnv0fu.jpg",
-      "id": 15
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537303121/IMG_1459_de0ljm.jpg",
+      "id": 18
     }
   ],
   "projects": [

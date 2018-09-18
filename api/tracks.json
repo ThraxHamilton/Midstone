@@ -66,20 +66,6 @@
       "song": "test",
       "artist": "test",
       "album": "test",
-      "year": "test",
-      "id": 7
-    },
-    {
-      "song": "Sample",
-      "artist": "Maxwell",
-      "album": "Urban Hang Suite",
-      "year": "1996",
-      "id": 8
-    },
-    {
-      "song": "test",
-      "artist": "test",
-      "album": "test",
       "year": "2000",
       "image": "",
       "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537200609/IMG_2078_smajuo.jpg",
@@ -111,6 +97,24 @@
       "image": "",
       "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537216063/IMG_2078_iduxd6.jpg",
       "id": 13
+    },
+    {
+      "song": "test",
+      "artist": "test1",
+      "album": "test3",
+      "year": "1999",
+      "image": "",
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537247939/IMG_2078_bbngwi.jpg",
+      "id": 14
+    },
+    {
+      "song": "test",
+      "artist": "B.G.",
+      "album": "Checkmate",
+      "year": "2000",
+      "image": "",
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537248080/IMG_1459_gnv0fu.jpg",
+      "id": 15
     }
   ],
   "projects": [

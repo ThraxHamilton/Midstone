@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import {
-    Card, Button, CardImg, CardTitle, CardText, CardDeck,
-    CardSubtitle, CardBody
+    Card, Button, CardGroup, CardTitle, CardText, CardDeck,
+    CardSubtitle, CardBody, Container, Row
 } from 'reactstrap';
+
+import './Samples.css'
 
 
 
@@ -22,19 +24,23 @@ export default class SampleList extends Component {
                         Add New Sample
                 </button>
                 </div>
-                <section className="owners">
+
+                <Container className="sample-container">
+                <Row>
                     {
                         this.props.samples.map(samples =>
-                            <div key={samples.id} className="card">
-                                <div className="card-body">
-                                    <CardDeck>
+                            <div key={samples.id} className="sample-card">
+                                <div class="card col-3">
+                                <div class='row'>
+                                
+                                    <CardGroup>
                                         <Card>
                                             <img src={samples.uploadedFileCloudinaryUrl} style={{ height: "auto", width: "400px" }} />
                                             <CardBody>
                                                 <CardTitle>{samples.song}</CardTitle>
                                                 <CardSubtitle>{samples.artist}</CardSubtitle>
-                                                <CardText>{samples.album}
-                                                    {samples.year}</CardText>
+                                                <CardText>
+                                                    </CardText>
                                                 <Button><a href="#"
                                                     onClick={() => { this.props.history.push(`/samples/edit/${samples.id}`) }}
                                                     className="card-link">Edit</a></Button>
@@ -44,7 +50,8 @@ export default class SampleList extends Component {
                                                 <Button> <Link className="nav-link" to={`/samples/${samples.id}`}>Details</Link></Button>
                                             </CardBody>
                                         </Card>
-                                    </CardDeck>
+                                    </CardGroup>
+                                </div>
                                 </div>
 
 
@@ -56,7 +63,8 @@ export default class SampleList extends Component {
 
                         )
                     }
-                </section>
+                    </Row>
+                </Container>
             </React.Fragment >
         )
     }

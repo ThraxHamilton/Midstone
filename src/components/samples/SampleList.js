@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import {
-    Card, Button, CardImg, CardTitle, CardText, CardDeck,
-    CardSubtitle, CardBody
+    Card, Button, CardGroup, CardTitle, CardText, CardDeck,
+    CardSubtitle, CardBody, Container, Row
 } from 'reactstrap';
+
+import './Samples.css'
 
 
 
@@ -12,7 +14,7 @@ export default class SampleList extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="animalButton">
+                <div className="newSampleButton">
                     <button type="button"
                         className="btn btn-success"
                         onClick={() => {
@@ -22,29 +24,34 @@ export default class SampleList extends Component {
                         Add New Sample
                 </button>
                 </div>
-                <section className="owners">
+
+                <Container>
+                <Row>
+                    <div className= 'samples-container'>
                     {
                         this.props.samples.map(samples =>
-                            <div key={samples.id} className="card">
-                                <div className="card-body">
-                                    <CardDeck>
+                            <div key={samples.id} className="sample-card">
+                                <div className='row'>
+                              
+                                    <CardGroup>
                                         <Card>
-                                            <img src={samples.uploadedFileCloudinaryUrl} style={{ height: "auto", width: "400px" }} />
+                                            <img src={samples.uploadedFileCloudinaryUrl} style={{ height: "auto", width: "100%" }} />
                                             <CardBody>
-                                                <CardTitle>{samples.song}</CardTitle>
-                                                <CardSubtitle>{samples.artist}</CardSubtitle>
-                                                <CardText>{samples.album}
-                                                    {samples.year}</CardText>
+                                                <CardTitle><h4 className='song'>{samples.song}</h4></CardTitle>
+                                                <CardSubtitle><h5 className='artist'>{samples.artist}</h5></CardSubtitle>
+                                                <CardText>
+                                                    </CardText>
                                                 <Button><a href="#"
                                                     onClick={() => { this.props.history.push(`/samples/edit/${samples.id}`) }}
-                                                    className="card-link">Edit</a></Button>
+                                                    className="card-edit">Edit</a></Button>
                                                 <Button><a href="#"
                                                     onClick={() => this.props.deleteSample(samples.id)}
-                                                    className="card-link">Delete</a></Button>
-                                                <Button> <Link className="nav-link" to={`/samples/${samples.id}`}>Details</Link></Button>
+                                                    className="card-delete">Delete</a></Button>
+                                                <Button> <Link className="detail-button" to={`/samples/${samples.id}`}>Details</Link></Button>
                                             </CardBody>
                                         </Card>
-                                    </CardDeck>
+                                    </CardGroup>
+                                </div>
                                 </div>
 
 
@@ -52,11 +59,14 @@ export default class SampleList extends Component {
 
 
 
-                            </div>
+                           
+                            
 
                         )
                     }
-                </section>
+                    </div>
+                    </Row>
+                </Container>
             </React.Fragment >
         )
     }

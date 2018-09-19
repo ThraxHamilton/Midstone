@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
+import {Button} from 'reactstrap'
 
 
 const CLOUDINARY_UPLOAD_PRESET = 'aawrrwib';
@@ -93,7 +94,7 @@ export default class SampleForm extends Component {
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="song"
-                            placeholder="Employee Name" />
+                            placeholder="New Sample" />
 
                         <label htmlFor="ownerName">Artist</label>
                         <input type="text" required="true"
@@ -127,7 +128,7 @@ export default class SampleForm extends Component {
 
 
 
-                    <button type="submit" onClick={this.constructNewSample} className="btn btn-primary">Submit</button>
+                    <Button type="submit" color='success' onClick={this.constructNewSample} className="btn btn-primary">Submit</Button>
                 </form>
             </React.Fragment>
         )

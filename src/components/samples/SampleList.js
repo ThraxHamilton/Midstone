@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import {
-    Card, Button, CardGroup, CardTitle, CardText, CardDeck,
+    Card, Button, CardGroup, CardTitle, CardText,
     CardSubtitle, CardBody, Container, Row
 } from 'reactstrap';
 
@@ -15,14 +15,14 @@ export default class SampleList extends Component {
         return (
             <React.Fragment>
                 <div className="newSampleButton">
-                    <button type="button"
-                        className="btn btn-success"
+                    <Button size='sm' block
+                        className="add-button"
                         onClick={() => {
                             this.props.history.push("/samples/new")
                         }
                         }>
                         Add New Sample
-                </button>
+                </Button>
                 </div>
 
                 <Container>
@@ -41,13 +41,17 @@ export default class SampleList extends Component {
                                                 <CardSubtitle><h5 className='artist'>{samples.artist}</h5></CardSubtitle>
                                                 <CardText>
                                                     </CardText>
-                                                <Button><a href="#"
+                                                <Button className='card-edit-button' color='success'><a href="#"
                                                     onClick={() => { this.props.history.push(`/samples/edit/${samples.id}`) }}
                                                     className="card-edit">Edit</a></Button>
-                                                <Button><a href="#"
+
+                                                     <Button color='info'> <Link className="detail-button" to={`/samples/${samples.id}`}>Details</Link></Button>
+
+                                                <Button color='danger'><a href="#"
                                                     onClick={() => this.props.deleteSample(samples.id)}
-                                                    className="card-delete">Delete</a></Button>
-                                                <Button> <Link className="detail-button" to={`/samples/${samples.id}`}>Details</Link></Button>
+                                                    className="card-delete" >Delete</a></Button>
+
+                                               
                                             </CardBody>
                                         </Card>
                                     </CardGroup>

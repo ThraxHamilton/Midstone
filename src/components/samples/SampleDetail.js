@@ -8,7 +8,7 @@ export default class SampleDetail extends Component {
             <section className="owner">
                 <div key={sample.id} className="card">
                     <div className="card-body">
-                        <h4 className="card-title">
+                        <h4 className="detail-card">
                         <ul>
                             <li>{sample.song}</li>
                             <li>{sample.artist}</li>

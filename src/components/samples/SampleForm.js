@@ -93,7 +93,7 @@ export default class SampleForm extends Component {
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="song"
-                            placeholder="Employee Name" />
+                            placeholder="New Sample" />
 
                         <label htmlFor="ownerName">Artist</label>
                         <input type="text" required="true"

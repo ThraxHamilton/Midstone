@@ -41,7 +41,7 @@ export default class SampleList extends Component {
                                                 <CardSubtitle><h5 className='artist'>{samples.artist}</h5></CardSubtitle>
                                                 <CardText>
                                                     </CardText>
-                                                <Button><a href="#"
+                                                <Button className='card-edit-button'><a href="#"
                                                     onClick={() => { this.props.history.push(`/samples/edit/${samples.id}`) }}
                                                     className="card-edit">Edit</a></Button>
                                                 <Button><a href="#"

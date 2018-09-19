@@ -7,3 +7,8 @@
 
 
 
+.login-link,.samples-link,.projects-link,.logout-link{
+    color: aliceblue;
+    text-align: center;
+    padding: 4px;
+}

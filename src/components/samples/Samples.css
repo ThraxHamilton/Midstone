@@ -1,3 +1,9 @@
+.samples-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
 .sample-card{
     margin: 4px;
     width: 20%;
@@ -6,35 +12,43 @@
    
 }
 
-.card-edit, .card-delete{
-    justify-content: center
+.btn.btn-secondary{
+    background-color: #06A77D
+}
+
+.btn-btn-success{
+    justify-content: center;
+    color: whitesmoke;
+    background-color: #F9C22E
+
+}
+
+.card-edit, .card-delete, .detail-button{
+    justify-content: center;
+    color: whitesmoke
 }
 
 .card-body{
     background-color: #005377
 }
-
-.newSampleButton{
-    justify-content: center
+.detail-card{
+    color: #ECA400
 }
 
-.viewArea{
-    background-color: #022F40
-}
 
-.samples-container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-}
+
 
 .song{
-    color: #FF7700
+    color: #FF7700;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .artist{
     color:#ECA400
 }
+.SampleForm{
+    color: whitesmoke
+}
+
 
 
 

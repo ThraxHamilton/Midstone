@@ -12,16 +12,11 @@
    
 }
 
-.btn.btn-secondary{
-    background-color: #06A77D
-}
-
-.btn-btn-success{
-    justify-content: center;
-    color: whitesmoke;
+.add-button.btn.btn-secondary{
     background-color: #F9C22E
-
 }
+
+
 
 .card-edit, .card-delete, .detail-button{
     justify-content: center;
@@ -40,10 +35,11 @@
 
 .song{
     color: #FF7700;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 .artist{
-    color:#ECA400
+    color:#ECA400;
+    font-family: 'Raleway', sans-serif;
 }
 .SampleForm{
     color: whitesmoke

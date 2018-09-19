@@ -1,0 +1,20 @@
+.card-title{
+    color: #8BB174;
+    font-family: 'Raleway', sans-serif;
+}
+
+.add.btn-btn-success{
+    background-color: #F9C22E
+} 
+
+.nav-link{
+    color: #F9C22E
+}
+
+.project-edit{
+    color: #FF7700
+}
+
+.project-delete{
+    color: rgba(184, 12, 9, 0.776)
+}

@@ -9,6 +9,6 @@
 
 .login-link,.samples-link,.projects-link,.logout-link{
     color: aliceblue;
-    text-align: center;
+    justify-content: center;
     padding: 4px;
 }

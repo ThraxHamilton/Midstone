@@ -52,14 +52,14 @@ export default class SampleEdit extends Component {
     }
 
     componentDidMount() {
-        // console.log(this.state)
+        // Run thru array of samples                                  Match sample to URL
         const sample = this.props.samples.find(a => a.id === parseInt(this.props.match.params.sampleId, 0))
         console.log(parseInt(this.props.match.params.sampleId, 0))
         console.log(this.props)
 
         console.log(sample)
 
-
+        // Setting values to be used below in ref
         this.song.value = sample.song;
         this.artist.value = sample.artist;
         this.album.value = sample.album;
@@ -67,7 +67,7 @@ export default class SampleEdit extends Component {
         this.setState({uploadedFileCloudinaryUrl: sample.uploadedFileCloudinaryUrl})
 
 
-
+        // Set state
         this.setState({
             sample: (sample)
         })
@@ -98,6 +98,7 @@ export default class SampleEdit extends Component {
                         className="form-control"
                         onChange={this.handleFieldChange}
                         id="song"
+                        // Ref to values above in componentDidMount()
                         ref={input => this.song = input}
                         placeholder='Song' />
 

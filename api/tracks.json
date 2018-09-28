@@ -59,33 +59,20 @@
       "inputEmail": "bx@yerrr.com",
       "inputPassword": "123",
       "id": 10
+    },
+    {
+      "inputUsername": "test",
+      "inputEmail": "test@test.com",
+      "inputPassword": "1",
+      "id": 11
     }
   ],
   "samples": [
     {
-      "song": "test",
-      "artist": "B.G.",
-      "album": "Checkmate",
-      "year": "2000",
-      "image": "",
-      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537248080/IMG_1459_gnv0fu.jpg",
-      "id": 15
-    },
-    {
-      "song": "test",
-      "artist": "test",
-      "album": "test",
-      "year": "Levi's",
-      "image": "",
-      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537296637/IMG_1459_i9jy2e.jpg",
-      "id": 16
-    },
-    {
-      "song": "test",
-      "artist": "test",
-      "album": "test",
-      "year": "Levi's",
-      "image": "",
+      "song": "edit",
+      "artist": "",
+      "album": "",
+      "year": "",
       "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537303107/IMG_1459_tmj0dw.jpg",
       "id": 17
     },
@@ -99,11 +86,20 @@
       "id": 18
     },
     {
-      "song": "Jungle",
-      "artist": "B.G.",
-      "album": "Checkmate",
+      "song": "edit",
+      "artist": "edi",
+      "album": "edit",
       "year": "2000",
+      "uploadedFileCloudinaryUrl": "",
       "id": 19
+    },
+    {
+      "song": "Edit",
+      "artist": "",
+      "album": "",
+      "year": "",
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1538150567/IMG_1444_mpdkyz.jpg",
+      "id": 20
     }
   ],
   "projects": [

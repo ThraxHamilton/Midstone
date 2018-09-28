@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import logo from './brush-circle.png'
+import logo from './record.png'
 
 export default class App extends Component {
   render() {

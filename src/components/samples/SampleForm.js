@@ -3,7 +3,7 @@ import Dropzone from 'react-dropzone';
 import request from 'superagent';
 import {Button} from 'reactstrap'
 
-
+// API/Cloud settings and URL
 const CLOUDINARY_UPLOAD_PRESET = 'aawrrwib';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/cloud10/upload';
 
@@ -19,7 +19,7 @@ export default class SampleForm extends Component {
             image: ""
         };
     }
-
+// FUNCTIONS FOR IMAGE DROP
     onImageDrop(files) {
         this.setState({
             uploadedFile: files[0]
@@ -94,7 +94,7 @@ export default class SampleForm extends Component {
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="song"
-                            placeholder="New Sample" />
+                            placeholder="Sample" />
 
                         <label htmlFor="ownerName">Artist</label>
                         <input type="text" required="true"
@@ -115,7 +115,7 @@ export default class SampleForm extends Component {
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="year"
-                            placeholder="Album" />
+                            placeholder="Year" />
 
                         <Dropzone
                             multiple={false}

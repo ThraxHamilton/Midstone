@@ -30,15 +30,15 @@ export default class Login extends Component {
         let username = this.state.username;
         LoginManager.getAll("users")
             .then(users => {
-                let loginUser = users.find(u => u.inputEmail === email && u.inputPassword === password && u.inputUsername)
-                if(loginUser){
+                let activeUser = users.find(u => u.inputEmail === email && u.inputPassword === password && u.inputUsername)
+                if(activeUser){
                     sessionStorage.setItem(
-                        "credentials",
+                        'activeUser',
                         JSON.stringify({
                             username: this.state.username,
                             email: this.state.email,
                             password: this.state.password,
-                            id: loginUser.id
+                            id: activeUser.id
                         })
                     )
                     this.props.history.push("/samples")

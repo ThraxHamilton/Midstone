@@ -133,7 +133,7 @@ export default class SampleEdit extends Component {
                             <p>Drop an image or click to select a file to upload.</p>
                         </Dropzone>
                 </div>
-                    <button type="submit" onClick={this.editSample} className="btn btn-primary">Edit</button>
+                    <button type="submit" onClick={this.editSample} className="btn btn-primary">Done!</button>
                 </form>
             </React.Fragment>
         )

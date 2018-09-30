@@ -94,7 +94,7 @@ export default class SampleForm extends Component {
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="song"
-                            placeholder="Sample" />
+                            placeholder="Title" />
 
                         <label htmlFor="ownerName">Artist</label>
                         <input type="text" required="true"
@@ -128,7 +128,7 @@ export default class SampleForm extends Component {
 
 
 
-                    <Button type="submit" color='success' onClick={this.constructNewSample} className="btn btn-primary">Submit</Button>
+                    <Button type="submit" color='success' onClick={this.constructNewSample} className="btn btn-primary">Add To My Trax!</Button>
                 </form>
             </React.Fragment>
         )

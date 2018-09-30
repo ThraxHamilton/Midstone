@@ -59,51 +59,77 @@
       "inputEmail": "bx@yerrr.com",
       "inputPassword": "123",
       "id": 10
+    },
+    {
+      "inputUsername": "test",
+      "inputEmail": "test@test.com",
+      "inputPassword": "1",
+      "id": 11
     }
   ],
   "samples": [
     {
-      "song": "test",
-      "artist": "B.G.",
-      "album": "Checkmate",
-      "year": "2000",
+      "song": "Love, Want and Need You",
+      "artist": "Patti Labelle",
+      "album": "In Love Again",
+      "year": "1983",
       "image": "",
-      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537248080/IMG_1459_gnv0fu.jpg",
-      "id": 15
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1538323492/patti_in_love_again_lmbng3.jpg",
+      "id": 21
     },
     {
-      "song": "test",
-      "artist": "test",
-      "album": "test",
-      "year": "Levi's",
+      "song": "Lover's Groove",
+      "artist": "Immature",
+      "album": "We Got It",
+      "year": "1995",
       "image": "",
-      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537296637/IMG_1459_i9jy2e.jpg",
-      "id": 16
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1538323769/download_yi8ovq.jpg",
+      "id": 22
     },
     {
-      "song": "test",
-      "artist": "test",
-      "album": "test",
-      "year": "Levi's",
+      "song": "Carry On ",
+      "artist": "Bobby Caldwell",
+      "album": "Carry On",
+      "year": "1982",
       "image": "",
-      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537303107/IMG_1459_tmj0dw.jpg",
-      "id": 17
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1538323968/download_1_ffc9xd.jpg",
+      "id": 23
     },
     {
-      "song": "",
-      "artist": "",
-      "album": "",
-      "year": "",
+      "song": "Brown Sugar",
+      "artist": "D'Angelo",
+      "album": "Brown Sugar",
+      "year": "1995",
       "image": "",
-      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1537303121/IMG_1459_de0ljm.jpg",
-      "id": 18
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1538324069/download_2_soxyae.jpg",
+      "id": 24
     },
     {
-      "song": "Jungle",
-      "artist": "B.G.",
-      "album": "Checkmate",
-      "year": "2000",
-      "id": 19
+      "song": "Windmills of Your Mind",
+      "artist": "Dusty Springfield",
+      "album": "Dusty In Memphis",
+      "year": "1969",
+      "image": "",
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1538324192/download_3_efbgpy.jpg",
+      "id": 25
+    },
+    {
+      "song": "Me and Those Dreamin' Eyez of Mine",
+      "artist": "D'Angelo",
+      "album": "Brown Sugar",
+      "year": "1995",
+      "image": "",
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1538324257/download_2_paqtbc.jpg",
+      "id": 26
+    },
+    {
+      "song": "Theme For The People",
+      "artist": "Mtume",
+      "album": "Kiss The World Goodbye",
+      "year": "1979",
+      "image": "",
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1538324396/mutme_sljhaj.jpg",
+      "id": 27
     }
   ],
   "projects": [
@@ -113,6 +139,21 @@
       "artist": "The Ebonys",
       "album": "",
       "id": 8
+    },
+    {
+      "project": "Dubs 459.5",
+      "sample": "Theme for the People",
+      "artist": "Mtume",
+      "album": "Kiss The World Goodbye",
+      "id": 9
+    },
+    {
+      "project": "Stuck Again",
+      "sample": "Like A Baby",
+      "artist": "Wham!",
+      "album": "Make It Big",
+      "id": 10
     }
+    
   ]
 }

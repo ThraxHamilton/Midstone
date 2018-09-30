@@ -6,6 +6,8 @@ export default class ProjectEdit extends Component{
         sample: [],
         artist: [],
         album: [],
+        project:{},
+       
     }
 
     handleFieldChange = evt => {
@@ -13,6 +15,22 @@ export default class ProjectEdit extends Component{
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
     }
+
+    componentDidMount() {
+        // Run thru array of samples                                  Match sample to URL
+        const project = this.props.projects.find(a => a.id === parseInt(this.props.match.params.projectId, 0))
+
+        this.project.value = project.project;
+        this.sample.value = project.sample;
+        this.artist.value = project.artist;
+        this.album.value = project.album;
+      
+
+        this.setState({
+            project: (project)
+        })
+    }
+
 
     editProject = evt => {
         evt.preventDefault()
@@ -39,20 +57,23 @@ export default class ProjectEdit extends Component{
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="project"
-                            placeholder="New Project" />
+                            ref={input => this.project = input}
+                            placeholder="Edit Project" />
                             
                         <label htmlFor="ownerName">New Sample</label>
                         <input type="text" required={true}
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="sample"
-                            placeholder="Sample Used" />
+                            ref={input => this.sample = input}
+                            placeholder="Edit Sample" />
     
                             <label htmlFor="ownerName">Artist</label>
                         <input type="text" required={true}
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="artist"
+                            ref={input => this.artist = input}
                             placeholder="Artist" />
     
                             <label htmlFor="ownerName">Album</label>
@@ -60,11 +81,12 @@ export default class ProjectEdit extends Component{
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="album"
+                            ref={input => this.album = input}
                             placeholder="Album" />
     
                         
                     </div>
-                        <button type="submit" onClick={this.editProject} className="btn btn-primary">Edit</button>
+                        <button type="submit" onClick={this.editProject} className="btn btn-primary">Done!</button>
                     </form>
                 </React.Fragment>
             )

@@ -7,14 +7,22 @@
     background-color: #F9C22E
 } 
 
-.nav-link{
-    color: #F9C22E
-}
-
-.project-edit{
+.detail-link{
     color: #FF7700
 }
 
+.project-edit{
+    color: #009ecd
+}
+
 .project-delete{
-    color: rgba(184, 12, 9, 0.776)
+    color: red
+}
+
+.project-name{
+    color: #F9C22E
+}
+
+.project-detail{
+    color: #F9C22E
 }

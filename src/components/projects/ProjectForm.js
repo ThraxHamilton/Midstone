@@ -1,6 +1,8 @@
 import React, { Component } from "react"
+import {Button} from 'reactstrap'
 
 export default class ProjectForm extends Component {
+    // Set initial empty states
     state = {
         project: "",
         sample: "",
@@ -14,12 +16,13 @@ export default class ProjectForm extends Component {
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
     }
-
+// Construct a new project in API using empty states from above
     constructNewProject = evt => {
         evt.preventDefault()
         if (this.state.project === "" && this.state.sample === "") {
             window.alert("Please add a song")
         } else {
+            // Update states
             const addNewProject = {
                 project: this.state.project,
                 sample: this.state.sample,
@@ -27,7 +30,7 @@ export default class ProjectForm extends Component {
                 album: this.state.album,
             }
 
-            // Create the employee and redirect user to employee list
+            // vvv Create the project vvv       and            vvv redirect user to project list vvv
             this.props.addProject(addNewProject).then(() => this.props.history.push("/projects"))
         }
     }
@@ -42,7 +45,7 @@ export default class ProjectForm extends Component {
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="project"
-                            placeholder="New Project" />
+                            placeholder="Name" />
 
                         <label htmlFor="ownerName">Sample</label>
                         <input type="text" required="true"
@@ -68,7 +71,7 @@ export default class ProjectForm extends Component {
 
                     </div>
 
-                    <button type="submit" onClick={this.constructNewProject} className="btn btn-primary">Submit</button>
+                    <Button type="submit" color='success' onClick={this.constructNewProject} className="btn btn-primary">Add To My List</Button>
                 </form>
             </React.Fragment>
         )

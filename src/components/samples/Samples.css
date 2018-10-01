@@ -27,19 +27,20 @@
     background-color: #005377
 }
 .detail-card{
-    color: #ECA400
+    color: #ECA400;
+    font-family: 'Raleway', sans-serif;
 }
 
 
 
 
 .song{
-    color: #FF7700;
-    font-family: 'Raleway', sans-serif;
+    color: rgb(86, 208, 94);
+    font-family: 'Give You Glory', cursive
 }
 .artist{
-    color:#ECA400;
-    font-family: 'Raleway', sans-serif;
+    color:#F9C22E;
+    font-family: 'Calligraffitti', cursive;
 }
 .SampleForm{
     color: whitesmoke

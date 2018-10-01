@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import LoginManager from '../modules/LoginManager'
 
+import './Login.css'
+
 export default class Login extends Component {
 
     // Set initial state
@@ -23,15 +25,17 @@ export default class Login extends Component {
 
         /*
             For now, just store the email and password that
-            the customer enters into local storage.
+            the customer enters into session storage.
         */
         let email = this.state.email;
         let password = this.state.password;
         let username = this.state.username;
         LoginManager.getAll("users")
             .then(users => {
+                // Filter through array of users
                 let activeUser = users.find(u => u.inputEmail === email && u.inputPassword === password && u.inputUsername)
                 if(activeUser){
+                    // Save user to session storage
                     sessionStorage.setItem(
                         'activeUser',
                         JSON.stringify({
@@ -47,7 +51,7 @@ export default class Login extends Component {
                 }
             })
     }
-
+// Save user to API
     constructNewUser = evt => {
         evt.preventDefault()
         const user = {
@@ -55,7 +59,7 @@ export default class Login extends Component {
             inputEmail: this.state.email,
             inputPassword: this.state.password,
         }
-
+// Push to API, then redirect to default app page
         this.props.addUser(user, "users").then(() => this.props.history.push("/"))
     }
 
@@ -63,7 +67,8 @@ export default class Login extends Component {
     render() {
         return (
             <form onSubmit={this.handleLogin}>
-                <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <div className='sign-in'>
+                <h1>Please sign in</h1>
                 <label htmlFor="inputEmail">
                     Email address
                 </label>
@@ -81,6 +86,8 @@ export default class Login extends Component {
                     id="username"
                     placeholder="Username"
                     required="" autoFocus="" />
+
+
                 <label htmlFor="inputPassword">
                     Password
                 </label>
@@ -92,10 +99,13 @@ export default class Login extends Component {
                 <button type="submit" onClick={this.constructNewUser}>
                     Register
                 </button>
+
                 <button type="submit" onClick={this.handleLogin}>
                     Sign In
                 </button>
+                </div>
             </form>
+            
         )
     }
 }

@@ -2,6 +2,7 @@ import React, { Component } from "react"
 
 export default class SampleDetail extends Component {
     render() {
+        // Filter through sample array and match to specific URL
         const sample = this.props.samples.find(a => a.id === parseInt(this.props.match.params.sampleId)) || {}
 
         return(
@@ -14,6 +15,7 @@ export default class SampleDetail extends Component {
                             <li>{sample.artist}</li>
                             <li>{sample.album}</li>
                             <li>{sample.year}</li>
+                            <li>{sample.link}</li>
                             </ul>
                         </h4>
                         <h6 className="card-title">{sample.artist}</h6>

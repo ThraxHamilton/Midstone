@@ -2,14 +2,17 @@ import React, { Component } from "react"
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 
-
+// Image/Cloud API calls
 const CLOUDINARY_UPLOAD_PRESET = 'aawrrwib';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/cloud10/upload';
 
 export default class SampleEdit extends Component {
+    // Constructor used because of Cloudinary and Dropzone
     constructor(props) {
+        // Super as well
         super(props);
         this.state = {
+            // Set initial empty states
             uploadedFileCloudinaryUrl: "",
             song: "",
             artist: "",
@@ -30,6 +33,7 @@ export default class SampleEdit extends Component {
         console.log(files)
     }
     handleImageUpload(file) {
+        // Send request to my profile and post to my cloud
         let upload = request.post(CLOUDINARY_UPLOAD_URL)
             .field('upload_preset' , CLOUDINARY_UPLOAD_PRESET)
                     .field('file', file);
@@ -38,6 +42,7 @@ export default class SampleEdit extends Component {
                 console.error(err);
             }
             if (response.body.secure_url !== '') {
+                // Update state for image to URL given from Cloudinary API
                 this.setState({
                     uploadedFileCloudinaryUrl: response.body.secure_url
                 });
@@ -72,7 +77,7 @@ export default class SampleEdit extends Component {
             sample: (sample)
         })
     }
-
+// Build edited sample in API
     editSample = evt => {
         evt.preventDefault()
             const sample = {
@@ -83,8 +88,9 @@ export default class SampleEdit extends Component {
                 uploadedFileCloudinaryUrl: this.state.uploadedFileCloudinaryUrl
 
             }
+            // 
             const sampleEditId = parseInt(this.props.match.params.sampleId, 0)
-            // Create the animal and redirect user to animal list
+            // Create the edited sample and redirect user to sample list
             this.props.editSample(sample, sampleEditId).then(() => this.props.history.push("/samples"))
         }
 

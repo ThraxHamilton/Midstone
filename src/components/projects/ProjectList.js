@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import {Button} from 'reactstrap'
+import { Button } from 'reactstrap'
 
 import './Project.css'
 
@@ -15,7 +15,7 @@ export default class ProjectList extends Component {
                             this.props.history.push("/projects/new")
                         }
                         }>
-                        Add New Project
+                        Add A New Project
                 </Button>
                 </div>
                 <section className="owners">
@@ -24,25 +24,25 @@ export default class ProjectList extends Component {
                             <div key={projects.id} className="card">
                                 <div className="card-body">
                                     <div className="card-title">
-                                        <div> {projects.project}</div>
+                                        <div className='project-name'> <h5>{projects.project}</h5></div>
                                         <div> {projects.sample}</div>
                                         <div> {projects.artist}</div>
                                         <div>{projects.album}</div>
                                     </div>
 
                                     <div className='projectButtons'>
-                                    <Link className="nav-link" to={`/projects/${projects.id}`}>Details</Link>
+                                        <Link className="detail-link" to={`/projects/${projects.id}`}>Details</Link>
 
-                                    <div>
-                                    <a href="#"
-                                        onClick={() => { this.props.history.push(`/projects/edit/${projects.id}`) }}
-                                        className="project-edit">Edit</a>
+                                        <div>
+                                            <a href="#"
+                                                onClick={() => { this.props.history.push(`/projects/edit/${projects.id}`) }}
+                                                className="project-edit">Edit</a>
                                         </div>
-                                        
-                                    <div>
-                                    <a href="#"
-                                        onClick={() => this.props.deleteProject(projects.id)}
-                                        className="project-delete">Delete</a>
+
+                                        <div>
+                                            <a href="#"
+                                                onClick={() => this.props.deleteProject(projects.id)}
+                                                className="project-delete">Delete</a>
                                         </div>
 
                                     </div>

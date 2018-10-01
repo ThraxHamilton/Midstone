@@ -14,10 +14,10 @@ export default class NavBar extends Component {
                         <Link className="login-link" to="/login">Login</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="samples-link" to="/samples">Samples</Link>
+                        <Link className="samples-link" to="/samples">MyTrax</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="projects-link" to="/projects">Projects</Link>
+                        <Link className="projects-link" to="/projects">My Projects</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="logout-link" to="/">Logout</Link>

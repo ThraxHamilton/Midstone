@@ -16,7 +16,8 @@ export default class SampleForm extends Component {
             artist: "",
             album: "",
             year: "",
-            image: ""
+            image: "",
+            link: ""
         };
     }
 // FUNCTIONS FOR IMAGE DROP
@@ -59,7 +60,7 @@ export default class SampleForm extends Component {
     }
 
     /*
-        Local method for validation, creating animal object, and
+        Local method for validation, creating an object, and
         invoking the function reference passed from parent component
      */
     constructNewSample = evt => {
@@ -73,11 +74,12 @@ export default class SampleForm extends Component {
                 album: this.state.album,
                 year: this.state.year,
                 image: this.state.image,
+                link: this.state.link,
                 uploadedFileCloudinaryUrl: this.state.uploadedFileCloudinaryUrl
 
             }
 
-            // Create the employee and redirect user to employee list
+            // Create the sample and redirect user to sample list
             this.props.addSample(addNewSample).then(() => this.props.history.push("/samples"))
         }
     }
@@ -116,6 +118,13 @@ export default class SampleForm extends Component {
                             onChange={this.handleFieldChange}
                             id="year"
                             placeholder="Year" />
+
+                            <label htmlFor="ownerName">Link</label>
+                        <input type="link" required="true"
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="link"
+                            placeholder="Link" />
 
                         <Dropzone
                             multiple={false}

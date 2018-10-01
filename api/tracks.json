@@ -130,6 +130,75 @@
       "image": "",
       "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1538324396/mutme_sljhaj.jpg",
       "id": 27
+    },
+    {
+      "song": "Monaxia",
+      "artist": "Giannis Spanos",
+      "album": "",
+      "year": "1971",
+      "image": "",
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1538405245/hqdefault_dykhi3.jpg",
+      "id": 28
+    },
+    {
+      "song": "Mack's Stroll",
+      "artist": "Willie Hutch",
+      "album": "The Mack (Motion Picture Soundtrack)",
+      "year": "1973",
+      "image": "",
+      "link": "",
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1538405989/themack_kbw76s.jpg",
+      "id": 30
+    },
+    {
+      "song": "Funkytown",
+      "artist": "Triple Six Mafia",
+      "album": "Underground Vol. 1",
+      "year": "2000",
+      "image": "",
+      "link": "",
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1538406107/51BBS642SFL_borpeb.jpg",
+      "id": 31
+    },
+    {
+      "song": "This Masquerade",
+      "artist": "The Carpenters",
+      "album": "Now & Then",
+      "year": "1973",
+      "image": "",
+      "link": "",
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1538406228/carpenters_kx6ftj.jpg",
+      "id": 32
+    },
+    {
+      "song": "Still My Love",
+      "artist": "Stevie Nicks",
+      "album": "Bella Donna",
+      "year": "1981",
+      "image": "",
+      "link": "",
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1538406315/71p2mFqHr5L._SY355__nspaad.jpg",
+      "id": 33
+    },
+    {
+      "song": "Sadness Theme",
+      "artist": "Franco Micalizzi",
+      "album": "",
+      "year": "1979",
+      "image": "",
+      "link": "https://www.youtube.com/watch?v=zPu6wye_N5o&list=RDzPu6wye_N5o&start_radio=1",
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1538410221/cover_stridulum_vp8vwe.gif",
+      "id": 34
+    },
+    {
+      "song": "Naked When You Come",
+      "artist": "Lollipops",
+      "album": "",
+      "year": "1966",
+      "image": "",
+      "link": "https://youtu.be/TMgYPvyFusg",
+      "uploadedFileCloudinaryUrl": "https://res.cloudinary.com/cloud10/image/upload/v1538410496/lolliopops_dcy456.jpg",
+      "id": 35
     }
   ],
   "projects": [
@@ -153,7 +222,34 @@
       "artist": "Wham!",
       "album": "Make It Big",
       "id": 10
+    },
+    {
+      "project": "Dubs 453",
+      "sample": "I've Cried",
+      "artist": "The Jahmels",
+      "album": "",
+      "id": 11
+    },
+    {
+      "project": "Dubs 450",
+      "sample": "In Need Of A Miracle ",
+      "artist": "New Radicals",
+      "album": "Maybe You've Been Brainwashed Too",
+      "id": 12
+    },
+    {
+      "project": "Dubs 352",
+      "sample": "Mack's Stroll",
+      "artist": "Willie Hutch",
+      "album": "The Mack OST",
+      "id": 13
+    },
+    {
+      "project": "Dubs 475",
+      "sample": "Cry Love",
+      "artist": "",
+      "album": "",
+      "id": 14
     }
-    
   ]
 }

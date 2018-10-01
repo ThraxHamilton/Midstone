@@ -21,7 +21,7 @@ export default class SampleList extends Component {
                             this.props.history.push("/samples/new")
                         }
                         }>
-                       I Found Something!
+                      Add A New Sample!
                 </Button>
                 </div>
 

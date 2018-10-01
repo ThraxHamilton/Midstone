@@ -137,7 +137,7 @@ export default class SampleForm extends Component {
 
 
 
-                    <Button type="submit" color='success' onClick={this.constructNewSample} className="btn btn-primary">Add To My Trax!</Button>
+                    <Button type="submit" color='success' onClick={this.constructNewSample} className="btn btn-primary">Save To My Trax!</Button>
                 </form>
             </React.Fragment>
         )
